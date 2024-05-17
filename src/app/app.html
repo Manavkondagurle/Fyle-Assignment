@@ -1,0 +1,16 @@
+<div class="row" style="padding: 0em 1em; text-align: center;background-color: aliceblue; margin: 0%;
+display: flex; justify-content: center; border-bottom: 2px solid rgb(152, 148, 148);">
+    <div class="col-lg-6">
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <div>
+                <app-search-bar (searchEvent)="onSearch($event)" (repositoriesLoaded)="onRepositoriesLoaded($event)"
+                 (repositoryLoaded)="onRepositoryLoaded($event)"></app-search-bar>
+            </div>
+        </div>
+    </div>
+</div>
+<ngx-skeleton-loader count="3" appearance="custom-content"></ngx-skeleton-loader>
+<app-comp [userData]="UserData">
+    <ngx-skeleton-loader appearance="custom-content"></ngx-skeleton-loader></app-comp> 
+<app-repository-list [repositories]="loadedRepositories"></app-repository-list>
+

@@ -1,0 +1,82 @@
+<div style="padding: 1em; border-top: 2px solid black;">
+    <div class="grid-container" style="padding:2em;">
+
+      <div *ngFor="let repository of repositories" class="grid-item">
+          <h4>{{ repository.name }}</h4>
+          <div>{{ repository?.description || "No Description "}}</div>
+          <div style="padding: 0.5em 0em;">
+              <div style="padding: 0.5em 0em; display: inline;">
+                  <div class="skills-used"> {{ repository?.language || "None" }} </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+
+       
+      <div *ngIf="!(repositories && repositories.length > 0)">
+        
+        <div class="grid-container" style="padding:0em 2em;">
+        
+          <div class="grid-item">
+          <h4>
+            Repository Name 1
+          </h4>
+          <div> Description</div>
+        
+        <div style="padding: 0.5em 0em;">
+          <div style="padding: 0.5em 0em; display: inline;">
+            <div class="skills-used"> hello </div>
+          </div> &nbsp;
+          
+          <div style="padding: 0.5em 0em; display: inline;">
+            <div class="skills-used"> hello </div>
+          </div>
+        </div>
+
+      </div>
+
+        <div class="grid-item">
+          <h4>
+            Repository Name 2
+          </h4>
+          <div> Description</div>
+        
+        <div style="padding: 0.5em 0em;">
+          <div style="padding: 0.5em 0em; display: inline;">
+            <div class="skills-used"> hello </div>
+          </div> &nbsp;
+          
+          <div style="padding: 0.5em 0em; display: inline;">
+            <div class="skills-used"> hello </div>
+          </div>
+        </div>
+
+        </div>
+      </div>
+      
+    </div>
+
+</div>
+<div style="padding: 2em;"> 
+  <div style="text-align: center;">
+    <a class="sec" style="font-size: 1em;">&laquo;</a>
+    <a class="sec">1</a>
+    <a class="sec">2</a>
+    <a class="sec">3</a>
+    <a class="sec">4</a>
+    <a class="sec">5</a>
+    <a class="sec">6</a>
+    <a class="sec">7</a>
+    <a class="sec">8</a>
+    <a class="sec">9</a>
+    <a class="sec">&raquo;</a>
+  </div>
+</div>
+<div style="text-align: center;" class="cont">
+  <a class="previous">&larr; Older</a>
+  <a class="next">Newer &rarr;</a>
+</div>
+<br>
+<br>
+
